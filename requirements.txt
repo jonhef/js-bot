@@ -1,0 +1,8 @@
+pyrogram>=2.0.0
+python-dotenv>=0.19.0
+google-api-python-client>=2.0.0
+google-auth-oauthlib>=0.4.6
+openai
+apscheduler>=3.9.1
+tgcrypto>=1.2.4
+aiosqlite
