@@ -2,3 +2,5 @@
 credentials.json
 .env
 __pycache__/
+memory.db
+*.session*
