@@ -8,6 +8,8 @@ class Settings(BaseSettings):
     TELEGRAM_API_ID: int
     TELEGRAM_API_HASH: str
     PHONE_NUMBER: str
+    EMAIL: str
+    PASSWORD: str
 
     class Config:
         env_file = ".env"

@@ -6,3 +6,4 @@ openai
 apscheduler>=3.9.1
 tgcrypto>=1.2.4
 aiosqlite
+python-dateutil
