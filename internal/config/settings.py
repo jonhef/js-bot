@@ -1,5 +1,7 @@
 from pydantic_settings import BaseSettings
 
+from os import path
+
 class Settings(BaseSettings):
     GOOGLE_CALENDAR_ID: str
     GOOGLE_CREDENTIALS_FILE: str
@@ -11,7 +13,8 @@ class Settings(BaseSettings):
     EMAIL: str
     PASSWORD: str
     PROXY: str
+    NAME: str
 
     class Config:
-        env_file = ".env"
+        env_file = "config/.env"
         env_file_encoding = 'utf-8'

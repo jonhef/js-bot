@@ -10,10 +10,10 @@ import os
 import sys
 import json
 
-from config.ai_tools import functions
-from config import tools, system_prompt, other_tools
+from ..config.ai_tools import functions
+from ..config import tools, system_prompt, other_tools
 
-from services import ai
+from ..services import ai
 
 logger = logging.getLogger(__name__)
 
@@ -70,7 +70,7 @@ async def channels(client: Client, message: Message):
     completion = await ai.make_completion(client, other_tools, system_prompt+info, messages)
     await process_completion(completion, messages, message, client, other_tools)
     
-from config import settings, client
+from ..config import settings, client
 
 client.add_handler(MessageHandler(handle_me, filters.chat(settings.USER_ID) & ~filters.channel))
 client.add_handler(MessageHandler(handle_other, ~filters.chat(settings.USER_ID) & ~filters.voice))

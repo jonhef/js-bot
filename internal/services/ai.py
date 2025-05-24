@@ -5,7 +5,7 @@ from pyrogram import Client
 from pyrogram.enums import MessageMediaType
 import logging
 
-from config import openai
+from ..config import openai
 
 logger = logging.getLogger(__name__)
 

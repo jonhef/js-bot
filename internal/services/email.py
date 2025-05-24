@@ -1,5 +1,5 @@
 import smtplib, ssl
-from config import settings
+from ..config import settings
 from concurrent.futures import ThreadPoolExecutor
 import asyncio
 import logging

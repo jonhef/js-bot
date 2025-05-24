@@ -259,10 +259,10 @@ other_tools = [{
     }
 }]
 
+from . import settings
 
-
-system_prompt = """You are a helpful assistant, your name is Otto von Bismark, you're a man. You will be asked in russian, english and might be german.
-Name of your boss is Novozhilov Dmitry Michaelovich. Your boss is living in Moscow.
+system_prompt = f"""You are a helpful assistant, your name is Otto von Bismark, you're a man. You will be asked in russian, english and might be german.
+Name of your boss is {settings.NAME}. Your boss is living in Moscow.
 Your job is to write new events in your boss' schedule and to convey important information to your boss.
 You are talking with people in telegram
 Rules:
@@ -319,16 +319,16 @@ async def read_memory(date = None):
         
 
 async def send_message(username, message = None):
-    from config import client, settings
+    from . import client, settings
     if message is None:
         message = username
     await client.send_message(settings.USER_ID if message == username else username, message)
     
-from services.calendar import add_event, get_events, delete_event
-from services.email import send_email
+from ..services.calendar import add_event, get_events, delete_event
+from ..services.email import send_email
 
 async def send_message_boss(message):
-    from config import client, settings
+    from . import client, settings
     logger.info(message)
     await client.send_message(settings.USER_ID, message)
     
@@ -347,7 +347,7 @@ async def get_weather(latitude, longitude):
         return data['current']['temperature_2m']
     
 async def block_user(username):
-    from config import client, settings
+    from . import client, settings
     if username.startswith("@"):
         username = username[1:]
     await client.block_user(username)

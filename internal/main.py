@@ -3,8 +3,8 @@ from pyrogram import filters
 from pyrogram.handlers import MessageHandler
 import logging
 
-from config import client, settings
-from handlers.telegram import handle_me, handle_other
+from .config import client, settings
+from .handlers.telegram import handle_me, handle_other
 
 logger = logging.getLogger(__name__)
 
