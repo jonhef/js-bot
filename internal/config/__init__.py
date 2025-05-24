@@ -17,7 +17,7 @@ def get_path(name_in_config: str):
 
 import httpx
 
-openai = AsyncOpenAI(api_key=config.OPENAI_API_KEY, http_client=httpx.AsyncClient(proxy=config.PROXY))
+openai = AsyncOpenAI(api_key=config.OPENAI_API_KEY)
 
 client = Client("../config/secretary_account", api_id=config.TELEGRAM_API_ID, api_hash=config.TELEGRAM_API_HASH, phone_number=config.PHONE_NUMBER)
 

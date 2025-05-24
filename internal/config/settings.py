@@ -12,7 +12,6 @@ class Settings(BaseSettings):
     PHONE_NUMBER: str
     EMAIL: str
     PASSWORD: str
-    PROXY: str
     NAME: str
 
     class Config:
