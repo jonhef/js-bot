@@ -10,6 +10,7 @@ class Settings(BaseSettings):
     PHONE_NUMBER: str
     EMAIL: str
     PASSWORD: str
+    PROXY: str
 
     class Config:
         env_file = ".env"
