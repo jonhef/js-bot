@@ -22,6 +22,8 @@ pip install -r requirements.txt
 python -m internal.main
 ```
 
+6. Enter confirmation code from Telegram
+
 ## How to use
 
 1. Write a message to your bot(it must be your second account)
